@@ -1,0 +1,2 @@
+export const API_STATIC_AUTH_TOKEN = 'ym4XjBNHBcSvxtEiMUiUr6j1QWA8NhQl'
+export const API_STATIC_TOKEN = 'Ueu8jROH6XJyDd6F3C0IxNtYIl2AguZ1'

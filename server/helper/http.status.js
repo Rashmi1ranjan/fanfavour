@@ -1,0 +1,3 @@
+export const HTTP_BAD_REQUEST_400 = 400
+export const HTTP_INTERNAL_SERVER_ERROR_500 = 500
+export const HTTP_UNAUTHORIZED_401 = 401

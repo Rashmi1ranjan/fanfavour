@@ -1,0 +1,35 @@
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: ff_client
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    ports:
+      - "${CLIENT_PORT}:${CLIENT_PORT}"
+    environment:
+      - NODE_OPTIONS=--max-old-space-size=1024
+    depends_on:
+      - server
+    networks:
+      - shared-network
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: ff_server
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    ports:
+      - "${SERVER_PORT}:${SERVER_PORT}"
+    env_file:
+      - ./.env
+    networks:
+      - shared-network
+
+networks:
+  shared-network:
+    external: true
