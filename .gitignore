@@ -1,3 +1,8 @@
 .env
 .vscode
 .codex
+
+*.log
+*.err.log
+run.log
+run.err.log
