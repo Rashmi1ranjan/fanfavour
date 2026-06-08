@@ -4,7 +4,7 @@ import express from 'express'
 import cors from 'cors'
 import http from 'http'
 import { Server } from 'socket.io'
-// import connectDB from './db.js'
+import connectDB from './db.js'
 import bearerToken from 'express-bearer-token'
 import fileupload from 'express-fileupload'
 import apiRoutes from './routes/index.js'
@@ -69,7 +69,7 @@ redis.connect(async () => {
 
 app.use(bearerToken())
 
-// connectDB()
+connectDB()
 app.use('/v1', apiRoutes)
 app.use('/v1/sso', ssoRoute)
 
@@ -80,4 +80,3 @@ app.get('/', (req, res) => {
 server.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`)
 })
-

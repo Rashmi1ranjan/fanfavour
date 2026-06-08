@@ -8,7 +8,8 @@ export default async function connectDB() {
     })
     console.log('MongoDB connected successfully')
   } catch (err) {
-    console.error('MongoDB connection error:', err)
+    console.error('MongoDB connection error:', err.message) // Log the specific error message
+    // Exit process with failure
+    process.exit(1)
   }
 }
-

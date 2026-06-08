@@ -1,0 +1,14 @@
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.162.97.120:3001
+- Environments: .env
+
+✓ Starting...
+Creating turbopack project {
+  dir: 'C:\\Users\\rashm\\OneDrive\\Documents\\PCPServices\\fanfavour\\client',
+  testMode: true
+}
+✓ Ready in 1036ms
+○ Compiling / ...
+ GET / 200 in 5.5s (compile: 4.1s, render: 1435ms)
+[?25h
